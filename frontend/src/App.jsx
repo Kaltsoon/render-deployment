@@ -8,7 +8,7 @@ function App() {
   return (
     <>
       <CssBaseline />
-      <BrowserRouter>
+      <BrowserRouter basename={import.meta.env.VITE_ROUTER_BASENAME}>
         <>
           <AppBar />
           <Container sx={{ marginY: 4 }}>

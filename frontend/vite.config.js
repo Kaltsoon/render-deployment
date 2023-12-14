@@ -3,6 +3,11 @@ import react from "@vitejs/plugin-react-swc";
 
 // https://vitejs.dev/config/
 export default defineConfig({
+  base: '/frontend',
+  build: {
+    outDir: "../src/main/resources/static/frontend",
+    emptyOutDir: true,
+  },
   plugins: [react()],
   server: {
     proxy: {
