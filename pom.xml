@@ -58,7 +58,7 @@
 			<groupId>org.postgresql</groupId>
 			<artifactId>postgresql</artifactId>
 			<scope>runtime</scope>
-		</dependency>		
+		</dependency>
 	</dependencies>
 	<build>
 		<plugins>
@@ -85,7 +85,6 @@
 						<goals>
 							<goal>install-node-and-npm</goal>
 						</goals>
-						<phase>prepare-package</phase>
 						<configuration>
 							<nodeVersion>v18.16.0</nodeVersion>
 						</configuration>
@@ -95,7 +94,6 @@
 						<goals>
 							<goal>npm</goal>
 						</goals>
-						<phase>prepare-package</phase>
 						<configuration>
 							<arguments>install</arguments>
 						</configuration>
@@ -105,14 +103,13 @@
 						<goals>
 							<goal>npm</goal>
 						</goals>
-						<phase>prepare-package</phase>
 						<configuration>
 							<arguments>run build</arguments>
 						</configuration>
 					</execution>
 				</executions>
 			</plugin>
-			
+
 		</plugins>
 	</build>
 </project>

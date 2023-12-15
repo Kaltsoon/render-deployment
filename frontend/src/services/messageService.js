@@ -1,9 +1,13 @@
+const BACKEND_URL = import.meta.env.VITE_BACKEND_URL;
+
 export function getAllMessages() {
-  return fetch("/api/messages").then((response) => response.json());
+  return fetch(`${BACKEND_URL}/api/messages`).then((response) =>
+    response.json()
+  );
 }
 
 export function createMessage(message) {
-  return fetch("/api/messages", {
+  return fetch(`${BACKEND_URL}/api/messages`, {
     method: "post",
     body: JSON.stringify(message),
     headers: {
